@@ -8,6 +8,7 @@ public class User implements Serializable {
     String surname;
     String email;
     String phoneNo;
+    String password;
     Boolean isActive;
     
     public User(int id, String fname, String surname, String email, String phoneNo, Boolean isActive) {
@@ -75,6 +76,13 @@ public class User implements Serializable {
         this.phoneNo = phoneNo;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword() {
+        this.password = password;
+    }
     public Boolean isActive() {
         return isActive;
     }

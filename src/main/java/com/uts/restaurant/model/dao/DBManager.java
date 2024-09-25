@@ -78,4 +78,41 @@ public class DBManager {
         }
         return new Users(users);
     }
+
+    public boolean checkUser(int id) throws SQLException {
+        PreparedStatement ps = conn.prepareStatement("SELECT * FROM timasd.users1 WHERE userid=?");
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        return (rs.next());
+    }
+
+    public User getUser(String email, String password) throws SQLException { 
+        PreparedStatement ps = conn.prepareStatement("SELECT * FROM Users WHERE email=? AND password=?");
+        ps.setString(1, email);
+        ps.setString(2, password);
+        ResultSet rs = ps.executeQuery();
+        
+        if (rs.next()) {
+            int id = rs.getInt("userid");
+            String fname = rs.getString("fname");
+            String surname = rs.getString("surname");
+            String phoneNo = rs.getString("phoneno");
+            if (checkUser(id)) {
+                return new User(id, fname, surname, email, phoneNo, null);
+            }
+            else {
+                return null;
+            }
+        }
+        return null;
+    }
+
+    public int getLastId() throws SQLException {
+        ResultSet rs = conn.prepareStatement("SELECT last_insert_id()").executeQuery();
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+        throw new SQLException();
+    }
+
 }

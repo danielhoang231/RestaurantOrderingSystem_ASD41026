@@ -23,7 +23,7 @@
 
         <header>
             <div>
-                <img src="food1.jpg" alt="Logo">
+                <img src="" alt="Logo">
             </div>
             <ul>
                 <li><a href="homedirect.jsp">Home</a></li>
@@ -35,16 +35,26 @@
 
         <div>
             <div id="center">
-                <form action="login" , method="post" class="form">
-                    <h1>Login</h1>
+                <form action="register" , method="post" class="form">
+                    <h1>Register</h1>
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter first name" name="fname" required>
+
+                    <label for="surname"><b>Surname</b></label>
+                    <input type="text" placeholder="Enter surname" name="surname" required>
+
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter email" name="email" required>
+
+                    <label for="phone"><b>Phone number</b></label>
+                    <input type="text" placeholder="Enter phone number" name="phone" required>
+
                     <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                    <button type="submit">Login</button>
+                    <input type="text" placeholder="Enter Password" name="password" required>
+                    <button type="submit">Register</button>
                     <div class="container">
                         <a class="cancelbtn" href="index.jsp">Cancel</a>
-                        <span>Dont have an <a href="register.jsp">account?</a></span>
+                        <span>Already have an <a href="login.jsp">account?</a></span>
                     </div>
                 </form>
             </div>

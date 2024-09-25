@@ -28,13 +28,10 @@
 		<div class="content">
 			<div>
 				<h1>Welcome to the Restaurant Online Ordering System!</h1>
+                <h1>What would you like to eat?</h1>
 			</div>
 			<img src="" alt="Food" style="width:50vw;height:50vh;">
 			<div class="dashboard">
-				<ul>
-					<li><a href="login.jsp">Login</a></li>
-					<li><a href="register.jsp">Sign Up</a></li>
-				</ul>
 			</div>
 		</div>
 
