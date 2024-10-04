@@ -23,7 +23,7 @@
 
         <header>
             <div>
-                <img src="food1.jpg" alt="Logo">
+                <img src="" alt="Logo">
             </div>
             <ul>
                 <li><a href="homedirect.jsp">Home</a></li>
@@ -35,12 +35,12 @@
 
         <div>
             <div id="center">
-                <form action="login" , method="post" class="form">
+                <form action="login" method="post" class="form">
                     <h1>Login</h1>
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter email" name="email" required>
                     <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <input type="text" placeholder="Enter Password" name="password" required>
                     <button type="submit">Login</button>
                     <div class="container">
                         <a class="cancelbtn" href="index.jsp">Cancel</a>

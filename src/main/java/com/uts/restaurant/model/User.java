@@ -9,15 +9,21 @@ public class User implements Serializable {
     String email;
     String phoneNo;
     String password;
-    Boolean isActive;
     
-    public User(int id, String fname, String surname, String email, String phoneNo, Boolean isActive) {
+    public User(int id, String fname, String surname, String email, String phoneNo, String password) {
         this.id = id;
         this.fname = fname;
         this.surname = surname;
         this.email = email;
         this.phoneNo = phoneNo;
-        this.isActive = isActive;
+        this.password = password;
+    }
+
+    public User(int id, String fname, String surname, String email, String phoneNo, Boolean isActive) {
+        this.fname = fname;
+        this.surname = surname;
+        this.email = email;
+        this.phoneNo = phoneNo;
     }
     
     public User(String fname, String surname, String email, String phoneNo, Boolean isActive) {
@@ -25,7 +31,6 @@ public class User implements Serializable {
         this.surname = surname;
         this.email = email;
         this.phoneNo = phoneNo;
-        this.isActive = isActive;
     }
 
     public User(String fname, String surname, String email, String phoneNo) {
@@ -33,7 +38,6 @@ public class User implements Serializable {
         this.surname = surname;
         this.email = email;
         this.phoneNo = phoneNo;
-        isActive = true;
     }
 
     public User(String email) {
@@ -41,7 +45,7 @@ public class User implements Serializable {
         this.surname = "";
         this.email = email;
         this.phoneNo = "";
-        isActive = true;
+        this.password = "";
     }
 
     public int getID() {
@@ -83,8 +87,4 @@ public class User implements Serializable {
     public void setPassword() {
         this.password = password;
     }
-    public Boolean isActive() {
-        return isActive;
-    }
-
 }

@@ -2,7 +2,6 @@ package com.uts.restaurant.model.dao;
 
 import java.sql.*;
 import java.util.ArrayList;
-
 import com.uts.restaurant.model.Customer;
 import com.uts.restaurant.model.Staff;
 import com.uts.restaurant.model.User;
@@ -80,12 +79,11 @@ public class DBManager {
     }
 
     public boolean checkUser(int id) throws SQLException {
-        PreparedStatement ps = conn.prepareStatement("SELECT * FROM timasd.users1 WHERE userid=?");
+        PreparedStatement ps = conn.prepareStatement("SELECT * FROM Users WHERE userid=?");
         ps.setInt(1, id);
         ResultSet rs = ps.executeQuery();
         return (rs.next());
     }
-
     public User getUser(String email, String password) throws SQLException { 
         PreparedStatement ps = conn.prepareStatement("SELECT * FROM Users WHERE email=? AND password=?");
         ps.setString(1, email);
@@ -93,15 +91,16 @@ public class DBManager {
         ResultSet rs = ps.executeQuery();
         
         if (rs.next()) {
-            int id = rs.getInt("userid");
+            int id = rs.getInt("user_id");
             String fname = rs.getString("fname");
             String surname = rs.getString("surname");
             String phoneNo = rs.getString("phoneno");
-            if (checkUser(id)) {
-                return new User(id, fname, surname, email, phoneNo, null);
+            Boolean isActive = rs.getBoolean("isactive");
+            if (checkCustomer(id)) {
+                return new Customer(id, fname, surname, email, phoneNo, isActive);
             }
             else {
-                return null;
+                return new Staff(id, fname, surname, email, phoneNo, isActive);
             }
         }
         return null;
@@ -115,4 +114,5 @@ public class DBManager {
         throw new SQLException();
     }
 
+    
 }
