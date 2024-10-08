@@ -1,22 +1,33 @@
 package com.uts.restaurant.model;
 
-public class Order {
-    private String productName;
+public class Cart {
+  //  private int cartItemID;
+    private int productID;
     private String customisationRequest;
     private int quantity;
 
-    public Order(String productName, String customisationRequest, int quantity) {
-        this.productName = productName;
+    public Cart(int productID, String customisationRequest, int quantity) {
+       // this.cartItemID = cartItemID;
+        this.productID = productID;
         this.customisationRequest = customisationRequest;
         this.quantity = quantity;
     }
 
-    public String getProductName() {
-        return productName;
+/*public int getCartItemID() {
+        return cartItemID;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setCartItemID(int id) {
+        id = cartItemID;
+    }
+ */
+    
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int id) {
+        id = productID;
     }
 
     public String getCustomisationRequest() {

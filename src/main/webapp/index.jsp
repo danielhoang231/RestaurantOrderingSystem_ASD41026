@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<jsp:include page="/ConnServlet" />
+		<jsp:include page="/ConnServletDaniel" />
 
 		<header>
 			<div>
@@ -19,7 +19,7 @@
 			</div>
 			<ul>
 				<li><a class="active" href="homedirect.jsp">Home</a></li>
-				<li><a href=".">Menu</a></li>
+				<li><a href="MenuServlet">Menu</a></li>
 				<li><a href=".">About</a></li>
 				<li><a href=".">Contact</a></li>
 			</ul>
@@ -39,7 +39,7 @@
 		<footer>
 			<ul>
 				<li><a href="homedirect.jsp">Home</a></li>
-				<li><a href=".">Menu</a></li>
+				<li><a href="">Menu</a></li>
 				<li><a href=".">About</a></li>
 				<li><a href=".">Contact</a></li>
 			</ul>
