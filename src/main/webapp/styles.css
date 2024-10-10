@@ -211,7 +211,7 @@ th {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+/*
 .logoutbtn, button{
     text-decoration: none;
     background-color: #385170;
@@ -225,6 +225,7 @@ th {
     border-style: none;
     display: flex;
 }
+*/
 
 #center {
     display: flex;

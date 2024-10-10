@@ -11,13 +11,13 @@
     </session-config>
 
     <servlet>
-        <servlet-name>ConnServlet</servlet-name>
-        <servlet-class>com.uts.restaurant.controller.ConnServlet</servlet-class>
+        <servlet-name>ConnServletDaniel</servlet-name>
+        <servlet-class>com.uts.restaurant.controller.ConnServletDaniel</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ConnServlet</servlet-name>
-        <url-pattern>/ConnServlet</url-pattern>
+        <servlet-name>ConnServletDaniel</servlet-name>
+        <url-pattern>/ConnServletDaniel</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -108,4 +108,41 @@
         <servlet-name>View-Order-Items</servlet-name>
         <url-pattern>/view-order-items</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MenuServlet</servlet-name>
+        <servlet-class>com.uts.restaurant.controller.MenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MenuServlet</servlet-name>
+        <url-pattern>/MenuServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RetrieveProductServlet</servlet-name>
+        <servlet-class>com.uts.restaurant.controller.RetrieveProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetrieveProductServlet</servlet-name>
+        <url-pattern>/RetrieveProductServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.uts.restaurant.controller.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCartServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewCartServlet</servlet-name>
+        <servlet-class>com.uts.restaurant.controller.ViewCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewCartServlet</servlet-name>
+        <url-pattern>/ViewCartServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
