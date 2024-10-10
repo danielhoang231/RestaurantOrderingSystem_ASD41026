@@ -1,0 +1,28 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between; /* This spaces out the title and links */
+  align-items: flex-start; /* Aligns elements at the top */
+  padding: 20px;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
